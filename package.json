@@ -9,7 +9,7 @@
       "lint": "eslint .",
       "test": "jest",
       "build": "webpack --mode production",
-      "deploy": "rsync -avz --exclude '.git*' --exclude '.github' ./ username@yourserver:/path/to/your/wordpress"
+      "deploy": "rsync -avz --exclude '.git*' --exclude '.github' ./ runas24@D:\dns\сайты\wordpress"
     },
     "author": "Your Name",
     "license": "MIT",
