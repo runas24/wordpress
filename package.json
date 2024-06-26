@@ -1,16 +1,36 @@
 {
     "name": "wordpress",
     "version": "1.0.0",
-    "description": "Your WordPress project description",
-    "main": "index.js",
+    "description": "My WordPress project managed with GitHub and Node.js",
     "scripts": {
+      "start": "wp-env start",
+      "stop": "wp-env stop",
+      "clean": "wp-env destroy",
+      "lint": "eslint .",
+      "test": "jest",
       "build": "webpack --mode production",
-      "start": "webpack serve --mode development"
+      "deploy": "rsync -avz --exclude '.git*' --exclude '.github' ./ username@yourserver:/path/to/your/wordpress"
     },
+    "author": "Your Name",
+    "license": "MIT",
     "dependencies": {
-      "webpack": "^5.0.0",
-      "webpack-cli": "^4.0.0",
-      "webpack-dev-server": "^3.11.0"
+      "wp-env": "^3.0.0"
+    },
+    "devDependencies": {
+      "eslint": "^7.32.0",
+      "eslint-config-wordpress": "^1.0.0",
+      "eslint-plugin-react": "^7.24.0",
+      "jest": "^27.0.6",
+      "webpack": "^5.44.0",
+      "webpack-cli": "^4.7.2",
+      "babel-loader": "^8.2.2",
+      "babel-preset-env": "^1.7.0"
+    },
+    "eslintConfig": {
+      "extends": "wordpress"
+    },
+    "jest": {
+      "testEnvironment": "node"
     }
   }
   
