@@ -1,0 +1,18 @@
+# WordPress игнорирование
+/wp-config.php
+/wp-content/uploads
+/wp-content/upgrade
+/wp-content/cache
+/wp-content/backup
+/sitemap.xml
+/sitemap.xml.gz
+/.htaccess
+/.well-known
+/node_modules
+/vendor
+composer.lock
+yarn.lock
+*.log
+*.sql
+*.tar.gz
+*.zip
